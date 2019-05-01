@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb  8 09:43:01 2019
+
+@author: abhishekms
+"""
+
+print("hello")  #to print str
+print('welcome')
+a=10
+print(a)
+print("the value is",a)
+print(type(a)) 
+
+
+s="Hi"
+print(s)
+print(type(s))
+
+print("the value \n is",a)
+print("The value"+"\n"+"is",a)
+
+a=10
+b=3
+
+sum=a+b
+sub=a-b
+c=a/b   #dividing two integers will give a floating point
+print(c)
+d=a//b  #truncate division operator 
+print(d)
+
+c=11%9
+print(c)
+
+c=-11%9 #c=7
+print(c)
+
+c=7//7 #1
+print(c)
+
+c=7.7//7 #1.0
+print(c)
+
+c=3/2 #1.5
+print(c)
+
+c=7/7 #1.0
+print(c)
+
+c=7.7/7 #1.1
+print(c)
+
+c=5*1**2   #precedence 1**2=1 then 5*1=5
+print(c)
