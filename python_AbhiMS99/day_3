@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 12 08:43:23 2019
+
+@author: abhishekms
+"""
+
+a=input("enter first input\n")
+b=input("enter second input\n")
+c=a+b  #concatenation a=2 b=3 c=23
+print("sum is",c)
+
+# d=a/b  TypeError: unsupported operand type(s) for /: 'str' and 'str'
+# print(d)
+
+p = input('enter a value')  #by default input function takes string type
+print(type(p))
+
+q = int(input("enter a value"))
+print(type(q)) #enter a value23   <class 'int'>
+
+a=int(input("enter first input\n"))
+b=int(input("enter second input\n"))
+c=a+b  
+print("sum is",c)
+
+val=input("enter val")
+val=float(val)
+print(type(val))
+
+d=a//b  #integer division a=10 b=5 d=2
+print(d)
+
+f=a/b #a=10 b=5 f=2.0
+print(f)
+
+rem=a%b #gives the remainder as output
+print("rem=",rem)
