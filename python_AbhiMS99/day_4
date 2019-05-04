@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat May  4 09:19:16 2019
+
+@author: abhishekms
+"""
+
+str="hello_world"
+print(str[1]) #prints e
+
+
+print(str[3:7]) #prints o_w
+
+a = "    Hello World!"
+print(a.strip()) #removes white spaces
+
+
+s="hello" 
+print(len(s)) #prints the length of the string s
+
+print(s.upper()) #converts the string to upper case
+
+print(str.lower())  #converts the string to lower case
+
+a = "Hello, World!"
+print(a.replace("H", "J"))  #replaces all occurences of H by J in string a
+
