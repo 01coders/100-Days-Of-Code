@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 14 11:03:35 2019
+
+@author: abhishekms
+"""
+
+a="hi"
+b="hi"
+if a==b:
+  print("both are same")
+else:
+   print("not same")
+   
+a=20
+b=30
+
+if a>b:
+  print("a is large")
+else:
+  print("b is large")
+   
+a=int(input())
+b=int(input())
+c=int(input())
+if (a>b and a>c):
+  print("a is large")
+elif b>a and b>c:
+  print("b is large")
+else:
+  print("c is large")
+
+
+  
+ 
+
