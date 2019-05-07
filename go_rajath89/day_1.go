@@ -18,13 +18,13 @@ func main() {
 
 	p := fmt.Println
 
-	now := time.Now()
+	now := time.Now() //returns current local time
 	p(now)
 
 	loc := now.Location()
 	p(loc)
 
-	Time() //func sleeps for 3sec
+	Time() // sleeps for 3sec
 
 	t := time.Now()
 	time_elapsed := t.Sub(now)
