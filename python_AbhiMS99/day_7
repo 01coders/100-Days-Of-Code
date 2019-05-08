@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May  6 21:07:29 2019
+
+@author: abhishekms
+"""
+
+a=10
+b=20
+print(id(a))#id returns the address of the object being referred
+print(id(b))
+
+c=a  # c and a refer to the same memory location 
+print(id(c))  #it prints same id as a
+
+a=30
+print(id(a)) #now the id of a will different from c
+print(id(c))
+ 
+a=10
+b=10
+if a is b:# is checks whether id(a)==id(b)
+  print("both are same")
+else:
+  print("both are different")
+  
+a=10
+b=30
+if a is b:  # here id(a)!=id(b) because both are different values
+  print("both are same")
+else:
+  print("both are different")
+  
+a=10
+b=a
+if a is b: # here id(a)==id(b)
+  print("both are same")
+else:
+  print("both are different")
