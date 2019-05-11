@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  8 09:39:45 2019
+
+@author: abhishekms
+"""
+
+l1 = [10,20,30,40]
+print(l1)
+print(l1[0])
+l1[3]=50
+print(l1)
+
+l2=[16,"hello",6.7]
+print(l2)
+
+l3=[16,"hello",6.7,['A','B']]
+print(l3)
+print(l3[3])
+print(l3[3][0])
+
+str='hi loki'
+l=list(str)  #converts string to list each charater
+print(l)
+
+l1=str.split() #converts string to list by words
+print(l1)
+
+str='hi$loki$hello'
+delimiter='$'
+l=str.split(delimiter) #l=str.split('$')  splits the string into list ele  based on delimiter
+print(l)
+
+#to print the occurence of word 'hello' in a given string
+str='hello world hello'
+count=0
+l1=str.split()
+for i in l1:
+  if i=='hello':
+    count+=1
+print(count)
+
+a=['how','are','you']
+delim=' '
+str=delim.join(a)
+print(str)
