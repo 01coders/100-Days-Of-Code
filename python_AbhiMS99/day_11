@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 12 08:53:37 2019
+
+@author: abhishekms
+"""
+
+l=[1,2,3]
+l[1]=4  #we can change the elements of a list
+print(l)
+#l[4]=5   IndexError: list assignment index out of range
+l.append(5)  #inserts ele to end of list
+print(l)
+
+a=[1,3]
+b=[3,2]
+a.extend(b) #adds list b to a
+print(a)
+
+a.sort()
+print(a)
+
+val=a.pop() #remove the last ele of the list
+print(val)
+print(a)
+
+y=[6,7,8,9]
+y.pop(2)   #remove and return the ele at index 2
+print(y)
+
+del y[0] #deletes the ele at index 0
+print(y)
+#method pop() removes and return the ele  but del deletes an ele but don't return the ele
+
+x=[1,2,3,4,5]
+del x[1:3] #to delete more than 1 ele in list
+print(x)
+
+
+
+x=[1,2,3,4,5]
+z=sum(x)  #adds the ele's of the list
+print(z)
+avg=z/len(x)
+print(avg)
+
