@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 12 09:19:32 2019
+
+@author: abhishekms
+"""
+
+#write a program to count the total number of words in a string
+
+str="hi hello bye"
+count=0
+l=str.split()
+for i in l:
+  count+=1
+  print(i)
+print(count)
+
+#count  number of characters in aa string
+str='hi loki'
+l=list(str)  #converts string to list each charater
+print(l)
+count=0 #count=len(l)
+for i in l:
+  count+=1
+print(count)
+
+#program to count occurence of letter 'a' in a string
+str="hi  abahy"
+L=list(str)
+count=0
+for i in L:
+  if i=='a':
+    count+=1
+print(count)
+
+#program to count the occurence of word 'day' in a string
+str="have a nice day day"
+count=0
+l=str.split()
+for i in l:
+  if i=="day":
+    count+=1
+print(count)
+
+#all words and their length
+str='have a nice day'
+L=str.split()
+for word in L:
+  print(word,":",len(word))
+print(max(L))
+#print only the longest word along with its length
+str='have a nice day'
+L=str.split()
+L1=[]
+for word in L:
+  L1.append(len(word))
+ele=max(L1)
+print(ele)
