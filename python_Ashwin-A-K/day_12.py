@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-l = list(("apple", "banana", "cherry"))
+l = list(("a", "b", "c"))
 
 # append()	Adds an element at the end of the list
 # clear()	Removes all the elements from the list

@@ -5,7 +5,7 @@ print(l1)
 print(l1[3])
 
 l1[3] = 50
-print(l1)
+print(l1)  # replacing element of index 3 with 50
 
 l2 = [10, 2.5, 'hello']  # list can contain of homo or hetrogeneous ele
 print(l2)

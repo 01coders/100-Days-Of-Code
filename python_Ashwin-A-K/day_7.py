@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
 l = [10, 20, 30, 40, 50]
-n = len(l)
+n = len(l)  # to find len of the list
 print("number of elements =",)
 for i in range(n):
-    print(l[i])
+    print(l[i])  # iterating the list
 
 for elem in l:
-    print(elem)
+    print(elem)  # iterating the list
 
 # write a prog to add the content of list stored in other list
 
