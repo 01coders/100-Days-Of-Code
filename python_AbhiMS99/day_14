@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 21 11:29:51 2019
+
+@author: abhishekms
+"""
+
+str="hello"
+if str=="hi":
+  print('true')
+else:
+  print('false')
+
+
+str="hello"
+if str<"hi":
+ print('true')
+else:
+ print('false')
+
+str="hello"
+if 'e' in str:
+  print('true')
+else:
+  print('false')
+
+s='welcome'
+for ch in s:
+  print(ch)
