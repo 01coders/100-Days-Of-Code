@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb 15 09:38:21 2019
+
+@author: abhishekms
+"""
+
+
+def fun():
+  print("user defined function")
+
+def fun1():
+  print("function2")
+  print("end")
+
+fun()
+fun1()
+
+def fun2(msg,val):
+  print(msg)
+  val+=10
+  print(val)
+  
+fun2("hii",20)
+#fun2(30,"hii")  it will give error
+fun2(val=34,msg="ghh")
+str="hello"
+val=79
+fun2(str,val)
+
+def fun3(msg,val):
+  print(msg)
+  print(val)
+  
+fun3("hi",0)
+fun3(67,"hii")
+ 
