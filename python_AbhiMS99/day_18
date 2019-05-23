@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 23 19:03:36 2019
+
+@author: abhishekms
+"""
+
+tuple1 = ("a", "b", "c")
+print(tuple1)
+
+print(tuple1[1])
+
+for x in tuple1:
+  print(x)
+
+if "a" in tuple1:
+  print("a exists")
+  
+print(len(tuple1))
+
+#tuple1[3] = "d"   in tuples we cannot add the elements this will cause an error
+#print(tuple1)
+
+tuple2 = ("a",1,"d",2.98)  #we can assign different datatypes
+print(tuple2)
+
+tuple3 = (1,2,1,2,5,4,2,30)
+l = tuple3.count(2) #Return the number of times the value 2 appears in the tuple3
+
+x=tuple3.index(30) #returns position of 30 present in the tuple3
+
+x=tuple3.index(2)  #finds the first occurrence of the specified value  
