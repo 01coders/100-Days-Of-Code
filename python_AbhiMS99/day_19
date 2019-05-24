@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 24 21:36:21 2019
+
+@author: abhishekms
+"""
+
+#A set is a collection which is unordered and unindexed.
+thisset = {"a","b", "c"}
+print(thisset)
+
+for x in thisset:
+  print(x)
+
+print("b" in thisset)
+
+print("v" in thisset)
+
+thisset.add("d")  #To add one item to a set use the add() method.
+print(thisset)
+
+thisset.update(["orange", "mango", "grapes"]) # To Add multiple items to a set, using the update() method
+print(thisset)
+
+print(len(thisset))
+
+thisset.remove("b")  #To remove an item in a set
+print(thisset)
+
+thisset.discard("banana")
+print(thisset)
+
+x = thisset.pop()
+print(x)
+print(thisset)
+
+thisset.clear()
+print(thisset)
+
