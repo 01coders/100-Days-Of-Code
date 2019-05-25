@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat May 25 20:15:55 2019
+
+@author: abhishekms
+"""
+
+#A dictionary is a collection which is unordered, changeable and indexed
+thisdict =	{
+  "brand": "car",
+  "model": "xy",
+  "year": 2000
+}
+print(thisdict)
+#dictionaries are written with curly brackets, and they have keys and values
+
+x = thisdict["model"]  #the items of a dictionary by referring to its key name
+
+x = thisdict.get("model") #works ame as above
+
+thisdict["year"] = 2018  # the value of a specific item by referring to its key name
+
+for x in thisdict:
+  print(x)
+  
+for x in thisdict:
+  print(thisdict[x])
+  
+for x in thisdict.values():
+  print(x)
+  
+for x, y in thisdict.items():
+  print(x, y)
+  
+print(len(thisdict))
+
