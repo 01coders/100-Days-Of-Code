@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May 27 19:20:30 2019
+
+@author: abhishekms
+"""
+
+thisdict =	{
+  "brand": "car",
+  "model": "xy",
+  "year": 2000
+}
+print(thisdict)
+
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+#Adding an item to the dictionary is done by using a new index key and assigning a value to it
+thisdict["color"] = "red"
+print(thisdict)
+
+
+thisdict.pop("model")   #pop() method removes the item with the specified key name
+print(thisdict)
+
+#popitem() method removes the last inserted item
+thisdict.popitem()
+print(thisdict)
+
+#del keyword removes the item with the specified key name
+del thisdict["model"]
+print(thisdict)
+
+
+del thisdict
+#print(thisdict)   it causes erroe because thisdict no longer exists
+
+
+#Make a copy of a dictionary with the copy() method
+thisdict =	{
+  "brand": "car",
+  "model": "xy",
+  "year": 2000
+}
+mydict = thisdict.copy()
+print(mydict)
