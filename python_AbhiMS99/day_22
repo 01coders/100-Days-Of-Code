@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  2 09:12:39 2019
+
+@author: abhishekms
+"""
+
+class vehicle:
+  #there is no rule to define all variables of the class
+  #self acts as pointer and points to the calling object
+  def create(self,wheels):
+    self.w=wheels  #self.w is a instance variable 
+    
+  def display(self):
+    print("number of wheels are:",self.w)
+    
+bike=vehicle()
+bike.create(2)
+bike.display()
+
+car=vehicle()
+car.create(4)
+car.display()
+
+bike2=vehicle()
+bike2.display()
+
+
+
+
