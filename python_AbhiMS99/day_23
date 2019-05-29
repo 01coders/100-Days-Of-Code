@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  4 11:13:58 2019
+
+@author: abhishekms
+"""
+
+class vehicle:
+  def __init__(self): #default function that will be called wheever object is created
+    self.w=None
+    self.c=None
+    self.f='petrol'
+  
+    
+  def assign(self,wheels,capacity,fuel):
+    self.w=wheels
+    self.c=capacity
+    self.f=fuel
+  def display(self):
+    print(self.w,self.c,self.f)
+    
+bike = vehicle()
+bike.assign(4,5,'petrol')
+bike.display()
+
+car = vehicle()
+ # car.assign() it will cause an error without init method
+car.display()
