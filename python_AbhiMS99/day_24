@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  4 11:33:53 2019
+
+@author: abhishekms
+"""
+
+class vehicle:
+  def __init__(self,wheels,capacity,petrol): #default function that will be called wheever object is created
+    self.w=wheels
+    self.c=capacity
+    self.f=petrol
+  
+  def assign(self,wheels,capacity,fuel):
+    self.w=wheels
+    self.c=capacity
+    self.f=fuel
+    
+  def display(self):
+    print(self.w,self.c,self.f)
+    
+car = vehicle(4,15,'petrol')
+car.display()
+
+car.assign(4,5,'diesel')
+car.display()
+    
+bike=vehicle(2,5,'petrol')
+bike.display()
+
+
+class vehicle:
+  def __init__(self,wheels=0,capacity=0,fuel='petrol'): #default function that will be called wheever object is created
+    self.w=wheels
+    self.c=capacity
+    self.f=fuel
+  
+  def assign(self,wheels,capacity,fuel):
+    self.w=wheels
+    self.c=capacity
+    self.f=fuel
+    
+  def display(self):
+    print(self.w,self.c,self.f)
+    
+car = vehicle(4,15,'petrol')
+car.display()
+
+car.assign(4,5,'diesel')
+car.display()
+    
+bike=vehicle()
+bike.display()
+
+auto=vehicle(3,450,'gas')
+auto.display()
+'''
+bus=vehicle(,,'diesel')
+bus.display()
+cannot be used
+'''
