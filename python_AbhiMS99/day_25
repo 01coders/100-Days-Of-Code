@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  4 11:40:30 2019
+
+@author: abhishekms
+"""
+
+class vehicle:
+  def __init__(self):
+    self.__wheel=0   #private
+    self.type='petrol'  #public
+  def display(self):
+    print(self.__wheel,self.type)
+    
+  def assign(self,w,t):
+    self.__wheel=w
+    self.type=t
+    
+car=vehicle()
+car.assign(4,'diesel')
+car.display()
+print(car.type) #type is public var can be access anywhere
+car.type='petrol'
+car.display()
+#print(car.__wheel)  throw an error because it's of type private
