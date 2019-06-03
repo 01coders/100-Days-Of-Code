@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  5 10:19:48 2019
+
+@author: abhishekms
+"""
+
+class customer:
+  def __init__(self):
+    self.__id=None
+    self.__name=None
+    self.__num=None
+    
+  def get_id(self):
+    return self.__id
+  
+  def get_name(self):
+    return self.__name
+  
+  def get_num(self):
+    return self.__num
+    
+  def set_id(self,id):
+    self.__id=id
+    
+  def set_name(self,name):
+    self.__name=name
+    
+  def set_num(self,num):
+    self.__num=num
+    
+c1=customer()
+c1.set_id(24)
+c1.set_name('xy')
+print('name:',c1.get_name())
+print('id:',c1.get_id())
