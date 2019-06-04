@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  5 10:07:36 2019
+
+@author: abhishekms
+"""
+
+class student:
+  
+  usn=100
+  def __init__(self,name,phno):
+    self.__name=name
+    self.__phno=phno
+    self.__usn='4vv16cs'+(str(student.usn))
+    student.usn+=1
+    
+  def display(self):
+    print(self.__name,self.__phno,self.__usn)
+  
+  @staticmethod  #for static methods no need self....this belongs to class not to object
+  def totalstudents():
+    return (student.usn-100)
+    
+s1=student('ab',9090)
+s1.display()
+
+s2=student('abc',93090)
+s2.display()
+
+t=student.totalstudents()
+print("totalstudents are",t)  #static methods must access only static variables
