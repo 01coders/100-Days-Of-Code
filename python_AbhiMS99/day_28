@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 16 08:56:27 2019
+
+@author: abhishekms
+"""
+
+class Date:
+  def __init__(self,day,month,year):
+    self.__day=day
+    self.__month=month
+    self.__year=year
+    
+  def get_day(self):
+    return self.__day
+  
+  def get_month(self):
+    return self.__month
+  
+  def get_year(self):
+    return self.__year
+  
+  def set_day(self):
+    return self.__day
+  
+  def set_month(self):
+    return self.__month
+  
+  def set_year(self):
+    return self.__year
+  
+class Customer:
+  def __init__(self,name,num,dob):
+    self.__name=name
+    self.__num=num
+    self.__dob=dob
+    
+  def get_dob(self):
+    return self.__dob
+  
+  def set_dob(self,value):
+    self.__dob=value
+  
+  def get_name(self):
+    return self.__name
+  
+  def set_name(self,value):
+    self.__name=value
+    
+  def get_num(self):
+    return self.__num
+  
+  def set_num(self,value):
+    self.__num=value
+    
+d = Date(13,11,1998)
+c1=Customer('manu',7204433566,d)
+print(c1.get_name())
+print(c1.get_dob)
+print(c1.get_name(),c1.get_dob(),c1.get_day())
+temp=c1.get_dob()
+print(temp.get_day())
+temp.set_year(1999)
+print(temp.get_day(),temp.get_month(),temp.get_year())
+c1.get_dob().set_year(2000)
