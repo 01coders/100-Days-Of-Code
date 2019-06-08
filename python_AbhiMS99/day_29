@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  2 08:38:52 2019
+
+@author: abhishekms
+"""
+
+import re
+'''
+
+line="XYZ:808.4.5.80"
+if re.search('808',line): #seraches for a pattern in a string
+  print("True")
+if re.search('[0-9]+',line):
+  print("True2")
+  
+hand=open('input.txt')
+for line in hand:
+  if re.search('X\S*:[0-9.]+',line):   #\s means non whitespace
+    print(line)
+'''
+# =============================================================================
+# hand=open('input.txt')
+# for line in hand:
+#   if re.search('X\S*:[0-9]+[.][0-9]+',line):   #\s means non whitespace
+#     print(line)
+# =============================================================================
+
+hand=open('input.txt')
+'''
+for line in hand:
+  if re.match('X\S*:[0-9]+',line):   #\s means non whitespace
+    print(line)
+'''
+for line in hand:
+  L=re.findall('[0-9]+',line)
+  print(L)
+
+line='xyz@gmail.com,abc@yahoo.com,this2gmail.com'
+l=re.findall('[a-z]+2gmail.com',line)
+print(l)
+
+str=re.search('[a-z]+@gmail.com',line)
+print(str)
+
+str=re.search('[a-z]+@gmail.com',line).group()
+print(str)
+
+
+
