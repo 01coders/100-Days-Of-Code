@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  5 08:35:40 2019
+
+@author: abhishekms
+"""
+
+fhand=open('Input.txt') #file will be opened in read mode defaultlly
+for lines in fhand:
+  if not lines.startswith("From:"):
+    print(lines)
+
+ 
+fhand=open('Input.txt') #file will be opened in read mode defaultlly
+for lines in fhand:
+  lines=lines.rstrip()
+  if lines.startswith("From:"):
+    print(lines)
+    
+fhand=open('Input.txt') #file will be opened in read mode defaultlly
+for lines in fhand:
+  lines=lines.rstrip()
+  if not lines.startswith("From:"):
+    continue
+  print(lines)
+
+fhand=open('Input.txt') #file will be opened in read mode defaultlly
+for lines in fhand:
+  lines=lines.rstrip()
+  if not lines.find("conducted@")==-1:
+    continue
+  print(lines)
+
+file=input("enter filename")
+fhand=open(file) #file will be opened in read mode defaultlly
+inp=fhand.read()
+print(inp)
+
