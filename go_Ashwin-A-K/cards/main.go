@@ -3,14 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	// frequently used datatype : bool,string,int,float
-	var card string = "d10" // War : go wants to identify the typw on its own
-	card1 := "h3"           // it determines the type of variable
-	card1 = newcard()            // reassigning var doesn't need ":"
-	fmt.Println(card)
-	fmt.Println(card1)
+	// array is of fixed length
+	// slice is of variable length
+
+	cards := []string{newcard(), "d1"} // initialize slice in different ways(return from func,hardcoded)
+	cards = append(cards, "h6")        //adding value to slice
+	fmt.Println(cards)
+
+	for i, card := range cards { // syntax for looping slice
+		fmt.Println(i, card) // prints index and value of each card
+	}
 }
 
-func newcard() string { // function should have a return type specified after func name
-	return "s7" // return type and variable that stores the value should be of same type
+func newcard() string {
+	return "c2"
 }
