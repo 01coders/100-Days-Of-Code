@@ -3,16 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	// array is of fixed length
-	// slice is of variable length
 
-	cards := []string{newcard(), "d1"} // initialize slice in different ways(return from func,hardcoded)
-	cards = append(cards, "h6")        //adding value to slice
+	cards := deck{newcard(), "d1"}
+	cards = append(cards, "h6")
 	fmt.Println(cards)
 
-	for i, card := range cards { // syntax for looping slice
-		fmt.Println(i, card) // prints index and value of each card
-	}
+	cards.dprint() // deck type variable calls dprint receiver func
 }
 
 func newcard() string {
