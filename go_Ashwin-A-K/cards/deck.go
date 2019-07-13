@@ -2,11 +2,23 @@ package main
 
 import "fmt"
 
-type deck []string // custom type funs
+type deck []string
 
-func (d deck) dprint() { // (d deck) is a receiver
-	for i, d := range d { // receiver sets up methods on the var
-		fmt.Println(i, d) // d is copy or instance of variable and deck is variable type
-		// thus any variable of type deck can access the receiver func
+func newDeck() deck { // function to create deck
+	cards := deck{} // creating slice of type deck
+	cardSuits := []string{"Spade", "Club", "Heart", "Diamond"}
+	cardValues := []string{"Ace", "Two", "Three"}
+
+	for _, suit := range cardSuits { //iteraing cardSuits
+		for _, value := range cardValues { //iterating cardValues
+			cards = append(cards, value+" of "+suit) // creating values for cards
+		} // underscore is used to ignore the variable as index is not used anywhere
+	}
+	return cards //returning var
+}
+
+func (d deck) dprint() { // function to print deck
+	for i, d := range d {
+		fmt.Println(i, d) // index and value
 	}
 }
