@@ -1,6 +1,9 @@
 package main
 
 func main() {
-	cards := newDeck() // creating variable to store value which is returned from the newDeck func
-	cards.dprint()     // receiver func to print values of card
+	cards := newDeck()
+
+	hand, remaining := deal(cards, 3) // deal func is called and returned values are stored under these two variables
+	hand.dprint()                     // they are of type deck. Hence, receiver func is used to print
+	remaining.dprint()
 }
