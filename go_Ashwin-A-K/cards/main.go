@@ -3,7 +3,8 @@ package main
 func main() {
 	cards := newDeck()
 
-	hand, remaining := deal(cards, 3) // deal func is called and returned values are stored under these two variables
-	hand.dprint()                     // they are of type deck. Hence, receiver func is used to print
+	hand, remaining := deal(cards, 3)
+	hand.dprint()
 	remaining.dprint()
+	cards.saveToFile("mycards") // receiver used to write the deck to the file
 }
