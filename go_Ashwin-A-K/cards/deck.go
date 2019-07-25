@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -31,10 +32,20 @@ func deal(d deck, handsize int) (deck, deck) {
 	return d[:handsize], d[handsize:]
 }
 
-func (d deck) toString() string { // receiver to convert type deck to string
-	return strings.Join([]string(d), ",") // join method is used to convert list of strings to one string with a seperator
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
 }
 
-func (d deck) saveToFile(filename string) error { // receiver to write to a file
-	return ioutil.WriteFile(filename, []byte(d.toString()), 0666) // writefile func is used to write to a file which takes filename, 																input to be written in terms of byte and file permission as args
+func (d deck) saveToFile(filename string) error {
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+}
+
+func deckFromFile(filename string) deck { //func to read from a file
+	bs, err := ioutil.ReadFile(filename) // ReadFile func reads content of the file
+	if err != nil {                      // error handling
+		fmt.Println("Error : ", err)
+		os.Exit(1) // terminates the program
+	}
+	s := strings.Split(string(bs), ",") // converts byte slice to string
+	return deck(s)                      // converts string to deck type and returns it
 }
