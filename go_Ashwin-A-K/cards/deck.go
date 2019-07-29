@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 type deck []string
@@ -40,12 +42,23 @@ func (d deck) saveToFile(filename string) error {
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
-func deckFromFile(filename string) deck { //func to read from a file
-	bs, err := ioutil.ReadFile(filename) // ReadFile func reads content of the file
-	if err != nil {                      // error handling
+func deckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename)
+	if err != nil {
 		fmt.Println("Error : ", err)
-		os.Exit(1) // terminates the program
+		os.Exit(1)
 	}
-	s := strings.Split(string(bs), ",") // converts byte slice to string
-	return deck(s)                      // converts string to deck type and returns it
+	s := strings.Split(string(bs), ",")
+	return deck(s)
+}
+
+func (d deck) shuffle() {
+	source := rand.NewSource(time.Now().UnixNano()) // creating new seed for random func using time func
+	r := rand.New(source)                           // new random function with above seed
+
+	for i := range d {
+		newPosition := r.Intn(len(d) - 1) // creating new position for cards
+
+		d[i], d[newPosition] = d[newPosition], d[i] // swapping cards with new position
+	}
 }

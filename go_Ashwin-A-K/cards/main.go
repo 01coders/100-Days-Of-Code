@@ -3,11 +3,14 @@ package main
 func main() {
 	cards := newDeck()
 
-	hand, remaining := deal(cards, 3)
-	hand.dprint()
-	remaining.dprint()
-	cards.saveToFile("mycards")
+	// hand, remaining := deal(cards, 3)
+	// hand.dprint()
+	// remaining.dprint()
+	// cards.saveToFile("mycards")
 
-	cards2 := deckFromFile("mycards") // deck is stored in the var
-	cards2.dprint()                   // print new deck
+	// cards2 := deckFromFile("mycards")
+	// cards2.dprint()
+
+	cards.shuffle()
+	cards.dprint()
 }
